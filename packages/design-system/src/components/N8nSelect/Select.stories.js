@@ -93,7 +93,7 @@ Sizes.args = {
 	placeholder: 'placeholder...',
 };
 
-const selectsWithIcon = ['xlarge', 'large', 'medium', 'small', 'mini'].map((size) => `<n8n-select v-bind="$props" v-model="val" @input="onInput" size="${size}"><n8n-icon icon="search" slot="prefix" /><n8n-option value="1">op1</n8n-option><n8n-option value="2">op2</n8n-option></n8n-select>`).join('');
+const selectsWithIcon = ['xlarge', 'large', 'medium', 'small', 'mini'].map((size) => `<n8n-select v-bind="$props" v-model="val" @input="onInput" size="${size}"><n8n-icon icon="magnifying-glass" slot="prefix" /><n8n-option value="1">op1</n8n-option><n8n-option value="2">op2</n8n-option></n8n-select>`).join('');
 
 const ManyTemplateWithIcon = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),

@@ -32,7 +32,7 @@
 					:to="infoUrl"
 					:bold="true"
 				>
-					<font-awesome-icon icon="info-circle"></font-awesome-icon>
+					<font-awesome-icon icon="circle-info"></font-awesome-icon>
 					<span>
 						{{ $locale.baseText('updatesPanel.howToUpdateYourN8nVersion') }}
 					</span>

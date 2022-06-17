@@ -13,7 +13,7 @@ export class Switch implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Switch',
 		name: 'switch',
-		icon: 'fa:map-signs',
+		icon: 'fa:signs-post',
 		group: ['transform'],
 		version: 1,
 		description: 'Route items depending on defined expression or rules',

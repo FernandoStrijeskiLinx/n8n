@@ -45,7 +45,7 @@
 			/>
 
 			<n8n-option :key="MANAGE_KEY" :value="MANAGE_KEY" class="ops manage-tags">
-				<font-awesome-icon icon="cog" />
+				<font-awesome-icon icon="gear" />
 				<span>{{ $locale.baseText('tagsDropdown.manageTags') }}</span>
 			</n8n-option>
 		</n8n-select>

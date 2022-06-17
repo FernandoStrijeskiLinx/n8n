@@ -7,7 +7,7 @@
 			</component>
 			<span :class="[$style.infoIcon, props.showTooltip ? $style.showIcon: $style.hiddenIcon]" v-if="props.tooltipText">
 				<component :is="$options.components.N8nTooltip" placement="top" :popper-class="$style.tooltipPopper">
-					<component :is="$options.components.N8nIcon" icon="question-circle" size="small" />
+					<component :is="$options.components.N8nIcon" icon="circle-question" size="small" />
 					<div slot="content" v-html="$options.methods.addTargetBlank(props.tooltipText)"></div>
 				</component>
 			</span>

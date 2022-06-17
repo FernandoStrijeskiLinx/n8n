@@ -69,7 +69,7 @@
 								class="json-data"
 							/>
 							<span v-else>
-								<font-awesome-icon icon="info-circle" />{{ $locale.baseText('nodeErrorView.theErrorCauseIsTooLargeToBeDisplayed') }}
+								<font-awesome-icon icon="circle-info" />{{ $locale.baseText('nodeErrorView.theErrorCauseIsTooLargeToBeDisplayed') }}
 							</span>
 						</div>
 					</el-card>

@@ -23,7 +23,7 @@
 					:value="selected"
 					@change="onSelect"
 				>
-					<font-awesome-icon icon="search" slot="prefix" />
+					<font-awesome-icon icon="magnifying-glass" slot="prefix" />
 					<n8n-option
 						v-for="credential in allCredentialTypes"
 						:value="credential.name"

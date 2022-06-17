@@ -37,7 +37,7 @@
 						@blur="trackSearch"
 						clearable
 					>
-						<font-awesome-icon icon="search" slot="prefix" />
+						<font-awesome-icon icon="magnifying-glass" slot="prefix" />
 					</n8n-input>
 					<div :class="$style.carouselContainer" v-show="collections.length || loadingCollections">
 						<div :class="$style.header">

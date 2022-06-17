@@ -1,6 +1,6 @@
 <template>
 	<div :class="$style.container">
-		<font-awesome-icon icon="exclamation-triangle" :class="$style.icon" />
+		<font-awesome-icon icon="triangle-exclamation" :class="$style.icon" />
 		<div :class="$style.message">
 			<div>
 				<n8n-heading size="2xlarge">

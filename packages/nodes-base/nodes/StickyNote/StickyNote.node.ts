@@ -10,7 +10,7 @@ export class StickyNote implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Sticky Note',
 		name: 'stickyNote',
-		icon: 'fa:sticky-note',
+		icon: 'fa:note-sticky',
 		group: ['input'],
 		version: 1,
 		description: 'Make your workflow easier to understand',

@@ -2,7 +2,7 @@
 	<div :class="{[$style[theme]]: true, [$style[type]]: true, [$style.bold]: bold}">
 		<n8n-tooltip :placement="tooltipPlacement" :popper-class="$style.tooltipPopper" :disabled="type !== 'tooltip'">
 			<span :class="$style.iconText">
-				<n8n-icon :icon="theme.startsWith('info') ? 'info-circle': 'exclamation-triangle'" />
+				<n8n-icon :icon="theme.startsWith('info') ? 'circle-info': 'triangle-exclamation'" />
 				<span v-if="type === 'note'"><slot></slot></span>
 			</span>
 			<span v-if="type === 'tooltip'" slot="content"><slot></slot></span>

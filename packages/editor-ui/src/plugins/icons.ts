@@ -8,62 +8,67 @@ import {
 	faAngleUp,
 	faArrowLeft,
 	faArrowRight,
+	faArrowUpRightFromSquare,
+	faArrowsRotate,
 	faAt,
 	faBook,
 	faBoxOpen,
 	faBug,
 	faCalendar,
 	faCheck,
-	faCheckCircle,
 	faChevronDown,
 	faChevronUp,
 	faChevronLeft,
 	faChevronRight,
+	faCircleDot,
+	faCircleInfo,
+	faCirclePlay,
+	faCircleQuestion,
 	faCode,
 	faCodeBranch,
-	faCog,
-	faCogs,
 	faClock,
 	faClone,
 	faCloud,
 	faCloudDownloadAlt,
 	faCopy,
 	faCut,
-	faDotCircle,
 	faEdit,
 	faEllipsisV,
 	faEnvelope,
 	faEye,
-	faExclamationTriangle,
 	faExpand,
-	faExternalLinkAlt,
 	faExchangeAlt,
 	faFile,
 	faFileArchive,
+	faFileArrowDown,
 	faFileCode,
-	faFileDownload,
 	faFileExport,
 	faFileImport,
 	faFilePdf,
+	faFloppyDisk,
 	faFolderOpen,
+	faGear,
+	faGears,
 	faGift,
 	faGraduationCap,
-	faHdd,
+	faHardDrive,
 	faHome,
 	faHourglass,
 	faImage,
 	faInbox,
 	faInfo,
-	faInfoCircle,
 	faKey,
 	faLink,
+	faListCheck,
 	faLightbulb,
+	faMagnifyingGlass,
+	faMagnifyingGlassMinus,
+	faMagnifyingGlassPlus,
 	faMapSigns,
 	faNetworkWired,
 	faPause,
 	faPauseCircle,
 	faPen,
-	faPencilAlt,
 	faPlay,
 	faPlayCircle,
 	faPlug,
@@ -71,13 +76,9 @@ import {
 	faPlusCircle,
 	faPlusSquare,
 	faQuestion,
-	faQuestionCircle,
 	faRedo,
+	faRotateLeft,
 	faRss,
-	faSave,
-	faSearch,
-	faSearchMinus,
-	faSearchPlus,
 	faServer,
 	faSignInAlt,
 	faSlidersH,
@@ -87,18 +88,19 @@ import {
 	faSync,
 	faSyncAlt,
 	faTable,
-	faTasks,
 	faTerminal,
 	faThLarge,
 	faTimes,
 	faTrash,
-	faUndo,
+	faTriangleExclamation,
 	faUnlink,
 	faUserCircle,
-	faUserFriends,
+	faUserGroup,
 	faUsers,
 	faVideo,
 	faStickyNote as faSolidStickyNote,
+	faPencil,
+	faCircleCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import {
 	faStickyNote,
@@ -115,62 +117,69 @@ addIcon(faAngleRight);
 addIcon(faAngleUp);
 addIcon(faArrowLeft);
 addIcon(faArrowRight);
+addIcon(faArrowUpRightFromSquare);
+addIcon(faArrowsRotate);
 addIcon(faAt);
 addIcon(faBook);
 addIcon(faBoxOpen);
 addIcon(faBug);
 addIcon(faCalendar);
 addIcon(faCheck);
-addIcon(faCheckCircle);
 addIcon(faChevronLeft);
 addIcon(faChevronRight);
 addIcon(faChevronDown);
 addIcon(faChevronUp);
+addIcon(faCircleCheck);
+addIcon(faCircleDot);
+addIcon(faCircleInfo);
+addIcon(faCirclePlay);
+addIcon(faCircleQuestion);
 addIcon(faCode);
 addIcon(faCodeBranch);
-addIcon(faCog);
-addIcon(faCogs);
 addIcon(faClock);
 addIcon(faClone);
 addIcon(faCloud);
 addIcon(faCloudDownloadAlt);
 addIcon(faCopy);
 addIcon(faCut);
-addIcon(faDotCircle);
 addIcon(faEdit);
 addIcon(faEllipsisV);
 addIcon(faEnvelope);
 addIcon(faEye);
-addIcon(faExclamationTriangle);
 addIcon(faExpand);
-addIcon(faExternalLinkAlt);
 addIcon(faExchangeAlt);
 addIcon(faFile);
 addIcon(faFileArchive);
+addIcon(faFileArrowDown);
 addIcon(faFileCode);
-addIcon(faFileDownload);
 addIcon(faFileExport);
 addIcon(faFileImport);
 addIcon(faFilePdf);
+addIcon(faFloppyDisk);
 addIcon(faFolderOpen);
+addIcon(faGear);
+addIcon(faGears);
 addIcon(faGift);
 addIcon(faGraduationCap);
-addIcon(faHdd);
+addIcon(faHardDrive);
 addIcon(faHome);
 addIcon(faHourglass);
 addIcon(faImage);
 addIcon(faInbox);
 addIcon(faInfo);
-addIcon(faInfoCircle);
 addIcon(faKey);
 addIcon(faLink);
+addIcon(faListCheck);
 addIcon(faLightbulb);
+addIcon(faMagnifyingGlass);
+addIcon(faMagnifyingGlassMinus);
+addIcon(faMagnifyingGlassPlus);
 addIcon(faMapSigns);
 addIcon(faNetworkWired);
 addIcon(faPause);
 addIcon(faPauseCircle);
 addIcon(faPen);
-addIcon(faPencilAlt);
+addIcon(faPencil);
 addIcon(faPlay);
 addIcon(faPlayCircle);
 addIcon(faPlug);
@@ -178,13 +187,9 @@ addIcon(faPlus);
 addIcon(faPlusCircle);
 addIcon(faPlusSquare);
 addIcon(faQuestion);
-addIcon(faQuestionCircle);
 addIcon(faRedo);
+addIcon(faRotateLeft);
 addIcon(faRss);
-addIcon(faSave);
-addIcon(faSearch);
-addIcon(faSearchMinus);
-addIcon(faSearchPlus);
 addIcon(faServer);
 addIcon(faSignInAlt);
 addIcon(faSlidersH);
@@ -196,15 +201,14 @@ addIcon(faSun);
 addIcon(faSync);
 addIcon(faSyncAlt);
 addIcon(faTable);
-addIcon(faTasks);
 addIcon(faTerminal);
 addIcon(faThLarge);
 addIcon(faTimes);
 addIcon(faTrash);
-addIcon(faUndo);
+addIcon(faTriangleExclamation);
 addIcon(faUnlink);
 addIcon(faUserCircle);
-addIcon(faUserFriends);
+addIcon(faUserGroup);
 addIcon(faUsers);
 addIcon(faVideo);
 

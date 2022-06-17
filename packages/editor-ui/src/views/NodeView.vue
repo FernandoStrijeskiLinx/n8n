@@ -88,10 +88,10 @@
 				<font-awesome-icon icon="expand"/>
 			</button>
 			<button @click="zoomIn()" class="button-white" :title="$locale.baseText('nodeView.zoomIn')">
-				<font-awesome-icon icon="search-plus"/>
+				<font-awesome-icon icon="magnifying-glass-plus"/>
 			</button>
 			<button @click="zoomOut()" class="button-white" :title="$locale.baseText('nodeView.zoomOut')">
-				<font-awesome-icon icon="search-minus"/>
+				<font-awesome-icon icon="magnifying-glass-minus"/>
 			</button>
 			<button
 				v-if="nodeViewScale !== 1 && !isDemo"
@@ -99,7 +99,7 @@
 				class="button-white"
 				:title="$locale.baseText('nodeView.resetZoom')"
 				>
-				<font-awesome-icon icon="undo" :title="$locale.baseText('nodeView.resetZoom')"/>
+				<font-awesome-icon icon="rotate-left" :title="$locale.baseText('nodeView.resetZoom')"/>
 			</button>
 		</div>
 		<div class="workflow-execute-wrapper" v-if="!isReadOnly">
@@ -108,7 +108,7 @@
 				:loading="workflowRunning"
 				:label="runButtonText"
 				size="large"
-				icon="play-circle"
+				icon="circle-play"
 				:title="$locale.baseText('nodeView.executesTheWorkflowFromTheStartOrWebhookNode')"
 				:type="workflowRunning ? 'light' : 'primary'"
 			/>

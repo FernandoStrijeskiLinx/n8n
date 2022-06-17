@@ -7,7 +7,7 @@
 					<div v-if="hasIssues" class="node-issues">
 						<n8n-tooltip placement="bottom" >
 							<div slot="content" v-html="nodeIssues"></div>
-							<font-awesome-icon icon="exclamation-triangle" />
+							<font-awesome-icon icon="triangle-exclamation" />
 						</n8n-tooltip>
 					</div>
 					<div v-else-if="waiting" class="waiting">
@@ -23,7 +23,7 @@
 				</div>
 
 				<div class="node-executing-info" :title="$locale.baseText('node.nodeIsExecuting')">
-					<font-awesome-icon icon="sync-alt" spin />
+					<font-awesome-icon icon="arrows-rotate" spin />
 				</div>
 
 				<div class="node-trigger-tooltip__wrapper">
@@ -48,10 +48,10 @@
 					<font-awesome-icon icon="clone" />
 				</div>
 				<div v-touch:tap="setNodeActive" class="option touch" :title="$locale.baseText('node.editNode')" v-if="!isReadOnly">
-					<font-awesome-icon class="execute-icon" icon="cog" />
+					<font-awesome-icon class="execute-icon" icon="gear" />
 				</div>
 				<div v-touch:tap="executeNode" class="option" :title="$locale.baseText('node.executeNode')" v-if="!isReadOnly && !workflowRunning">
-					<font-awesome-icon class="execute-icon" icon="play-circle" />
+					<font-awesome-icon class="execute-icon" icon="circle-play" />
 				</div>
 			</div>
 			<div :class="{'disabled-linethrough': true, success: workflowDataItems > 0}" v-if="showDisabledLinethrough"></div>

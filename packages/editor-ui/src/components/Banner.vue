@@ -6,7 +6,7 @@
 		:class="$style.container"
 	>
 		<font-awesome-icon
-				:icon="theme === 'success' ? 'check-circle' : 'exclamation-triangle'"
+				:icon="theme === 'success' ? 'circle-check' : 'triangle-exclamation'"
 				:class="theme === 'success' ? $style.icon : $style.dangerIcon"
 		/>
 		<div

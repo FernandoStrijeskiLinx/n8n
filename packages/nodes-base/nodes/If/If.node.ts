@@ -14,7 +14,7 @@ export class If implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'IF',
 		name: 'if',
-		icon: 'fa:map-signs',
+		icon: 'fa:signs-post',
 		group: ['transform'],
 		version: 1,
 		description: 'Splits a stream based on comparisons',

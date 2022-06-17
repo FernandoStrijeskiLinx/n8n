@@ -9,7 +9,7 @@
 				clearable
 				:maxlength="maxLength"
 			>
-				<font-awesome-icon slot="prefix" icon="search" />
+				<font-awesome-icon slot="prefix" icon="magnifying-glass" />
 			</n8n-input>
 		</el-col>
 		<el-col :span="14">

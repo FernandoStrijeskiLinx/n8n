@@ -2,7 +2,7 @@
 	<div :class="$style['parameter-issues']" v-if="issues.length">
 		<n8n-tooltip placement="top" >
 			<div slot="content" v-html="`${$locale.baseText('parameterInput.issues')}:<br />&nbsp;&nbsp;- ` + issues.join('<br />&nbsp;&nbsp;- ')"></div>
-			<font-awesome-icon icon="exclamation-triangle" />
+			<font-awesome-icon icon="triangle-exclamation" />
 		</n8n-tooltip>
 	</div>
 </template>

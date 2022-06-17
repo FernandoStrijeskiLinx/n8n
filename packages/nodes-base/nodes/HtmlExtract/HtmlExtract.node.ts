@@ -47,7 +47,7 @@ export class HtmlExtract implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'HTML Extract',
 		name: 'htmlExtract',
-		icon: 'fa:cut',
+		icon: 'fa:scissors',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["sourceData"] + ": " + $parameter["dataPropertyName"]}}',

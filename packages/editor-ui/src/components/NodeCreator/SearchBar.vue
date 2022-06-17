@@ -1,7 +1,7 @@
 <template>
 	<div class="search-container">
 		<div :class="{ prefix: true, active: value.length > 0 }">
-			<font-awesome-icon icon="search" />
+			<font-awesome-icon icon="magnifying-glass" />
 		</div>
 		<div class="text">
 			<input

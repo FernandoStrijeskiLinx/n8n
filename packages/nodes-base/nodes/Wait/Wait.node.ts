@@ -46,7 +46,7 @@ export class Wait implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wait',
 		name: 'wait',
-		icon: 'fa:pause-circle',
+		icon: 'fa:circle-pause',
 		group: ['organization'],
 		version: 1,
 		description: 'Wait before continue with execution',

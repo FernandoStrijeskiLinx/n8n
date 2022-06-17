@@ -63,7 +63,7 @@ export default mixins(
 			}
 			options.push(
 				{
-					icon: 'cog',
+					icon: 'gear',
 					value: 'settings',
 					align: 'right',
 				},

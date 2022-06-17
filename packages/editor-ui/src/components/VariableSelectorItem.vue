@@ -11,7 +11,7 @@
 
 					<el-dropdown trigger="click" @click.stop @command="optionSelected($event, item)" v-if="allowParentSelect === true">
 						<span class="el-dropdown-link clickable" @click.stop>
-							<font-awesome-icon icon="dot-circle" :title="$locale.baseText('variableSelectorItem.selectItem')" />
+							<font-awesome-icon icon="circle-dot" :title="$locale.baseText('variableSelectorItem.selectItem')" />
 						</span>
 						<el-dropdown-menu slot="dropdown">
 							<el-dropdown-item :command="operation.command" v-for="operation in itemAddOperations" :key="operation.command">{{operation.displayName}}</el-dropdown-item>
@@ -27,7 +27,7 @@
 		<div v-else class="value clickable" @click="selectItem(item)">
 			<div class="item-title" :title="item.key">
 				{{item.name}}:
-				<font-awesome-icon icon="dot-circle" title="Select Item" />
+				<font-awesome-icon icon="circle-dot" title="Select Item" />
 			</div>
 			<div class="item-value">{{ item.value !== undefined?item.value: $locale.baseText('variableSelectorItem.empty') }}</div>
 		</div>

@@ -4,7 +4,7 @@
 			<span v-html="$locale.baseText('executionDetails.readOnly.youreViewingTheLogOf')"></span>
 		</div>
 		<div>
-			<font-awesome-icon icon="exclamation-triangle" />
+			<font-awesome-icon icon="triangle-exclamation" />
 			<span v-html="$locale.baseText('executionDetails.readOnly.readOnly')"></span>
 		</div>
 	</n8n-tooltip>

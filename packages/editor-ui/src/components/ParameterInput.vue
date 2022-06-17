@@ -38,7 +38,7 @@
 				:placeholder="isValueExpression ? '' : getPlaceholder()"
 			>
 				<div slot="suffix" class="expand-input-icon-container">
-					<font-awesome-icon v-if="!isValueExpression && !isReadOnly" icon="external-link-alt" class="edit-window-button clickable" :title="$locale.baseText('parameterInput.openEditWindow')" @click="displayEditDialog()" />
+					<font-awesome-icon v-if="!isValueExpression && !isReadOnly" icon="arrow-up-right-from-square" class="edit-window-button clickable" :title="$locale.baseText('parameterInput.openEditWindow')" @click="displayEditDialog()" />
 				</div>
 			</n8n-input>
 		</div>

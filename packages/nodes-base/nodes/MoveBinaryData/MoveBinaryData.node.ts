@@ -45,7 +45,7 @@ export class MoveBinaryData implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Move Binary Data',
 		name: 'moveBinaryData',
-		icon: 'fa:exchange-alt',
+		icon: 'fa:right-left',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["mode"]==="binaryToJson" ? "Binary to JSON" : "JSON to Binary"}}',

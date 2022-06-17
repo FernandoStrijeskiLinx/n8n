@@ -26,7 +26,7 @@
 					<span>
 						<font-awesome-icon
 							class="external"
-							icon="external-link-alt"
+							icon="arrow-up-right-from-square"
 							:title="$locale.baseText('nodeCreator.noResults.requestTheNode')"
 						/>
 					</span>

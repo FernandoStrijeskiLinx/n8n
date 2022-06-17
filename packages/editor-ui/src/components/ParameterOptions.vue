@@ -7,7 +7,7 @@
 		>
 			<span class="el-dropdown-link">
 				<font-awesome-icon
-					icon="cogs"
+					icon="gears"
 					class="reset-icon clickable"
 					:title="$locale.baseText('parameterInput.parameterOptions')"
 				/>

@@ -15,7 +15,7 @@
 			</n8n-menu-item>
 			<n8n-menu-item index="/settings/users" v-if="canAccessUsersSettings()" :class="$style.tab">
 				<i :class="$style.icon">
-					<font-awesome-icon icon="user-friends" />
+					<font-awesome-icon icon="user-group" />
 				</i>
 				<span slot="title">{{ $locale.baseText('settings.users') }}</span>
 			</n8n-menu-item>

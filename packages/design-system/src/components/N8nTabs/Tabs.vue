@@ -17,7 +17,7 @@
 				>
 					<div>
 						{{ option.label }}
-						<span :class="$style.external"><n8n-icon icon="external-link-alt" size="small" /></span>
+						<span :class="$style.external"><n8n-icon icon="arrow-up-right-from-square" size="small" /></span>
 					</div>
 				</a>
 

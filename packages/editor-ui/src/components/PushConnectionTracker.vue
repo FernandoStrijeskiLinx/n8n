@@ -4,7 +4,7 @@
 			<n8n-tooltip placement="bottom-end" >
 				<div slot="content" v-html="$locale.baseText('pushConnectionTracker.cannotConnectToServer')"></div>
 				<span>
-					<font-awesome-icon icon="exclamation-triangle" />&nbsp; {{ $locale.baseText('pushConnectionTracker.connectionLost') }}
+					<font-awesome-icon icon="triangle-exclamation" />&nbsp; {{ $locale.baseText('pushConnectionTracker.connectionLost') }}
 				</span>
 			</n8n-tooltip>
 		</div>

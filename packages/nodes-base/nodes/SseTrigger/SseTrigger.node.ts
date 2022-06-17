@@ -11,7 +11,7 @@ export class SseTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'SSE Trigger',
 		name: 'sseTrigger',
-		icon: 'fa:cloud-download-alt',
+		icon: 'fa:cloud-arrow-down',
 		group: ['trigger'],
 		version: 1,
 		description: 'Triggers the workflow when Server-Sent Events occur',

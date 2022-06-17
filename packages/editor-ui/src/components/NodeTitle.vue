@@ -19,7 +19,7 @@
 			<div slot="reference" :class="{[$style.title]: true, [$style.hoverable]: !readOnly}">
 				{{ value }}
 				<div :class="$style.editIconContainer">
-					<font-awesome-icon :class="$style.editIcon" icon="pencil-alt" v-if="!readOnly" />
+					<font-awesome-icon :class="$style.editIcon" icon="pencil" v-if="!readOnly" />
 				</div>
 			</div>
 		</el-popover>

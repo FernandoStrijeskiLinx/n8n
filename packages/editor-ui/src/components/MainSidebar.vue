@@ -43,7 +43,7 @@
 					</n8n-menu-item>
 					<n8n-menu-item index="workflow-save" :disabled="!onWorkflowPage">
 						<template slot="title">
-							<font-awesome-icon icon="save"/>
+							<font-awesome-icon icon="floppy-disk"/>
 							<span slot="title" class="item-title">{{ $locale.baseText('mainSidebar.save') }}</span>
 						</template>
 					</n8n-menu-item>
@@ -61,7 +61,7 @@
 					</n8n-menu-item>
 					<n8n-menu-item index="workflow-download" :disabled="!onWorkflowPage">
 						<template slot="title">
-							<font-awesome-icon icon="file-download"/>
+							<font-awesome-icon icon="file-arrow-down"/>
 							<span slot="title" class="item-title">{{ $locale.baseText('mainSidebar.download') }}</span>
 						</template>
 					</n8n-menu-item>
@@ -73,13 +73,13 @@
 					</n8n-menu-item>
 					<n8n-menu-item index="workflow-import-file" :disabled="!onWorkflowPage">
 						<template slot="title">
-							<font-awesome-icon icon="hdd"/>
+							<font-awesome-icon icon="hard-drive"/>
 							<span slot="title" class="item-title">{{ $locale.baseText('mainSidebar.importFromFile') }}</span>
 						</template>
 					</n8n-menu-item>
 					<n8n-menu-item index="workflow-settings" :disabled="!onWorkflowPage || !currentWorkflow">
 						<template slot="title">
-							<font-awesome-icon icon="cog"/>
+							<font-awesome-icon icon="gear"/>
 							<span slot="title" class="item-title">{{ $locale.baseText('mainSidebar.settings') }}</span>
 						</template>
 					</n8n-menu-item>
@@ -111,12 +111,12 @@
 				</el-submenu>
 
 				<n8n-menu-item index="executions">
-					<font-awesome-icon icon="tasks"/>&nbsp;
+					<font-awesome-icon icon="list-check"/>&nbsp;
 					<span slot="title" class="item-title-root">{{ $locale.baseText('mainSidebar.executions') }}</span>
 				</n8n-menu-item>
 
 				<n8n-menu-item index="settings" v-if="canUserAccessSettings && currentUser">
-					<font-awesome-icon icon="cog"/>&nbsp;
+					<font-awesome-icon icon="gear"/>&nbsp;
 					<span slot="title" class="item-title-root">{{ $locale.baseText('settings') }}</span>
 				</n8n-menu-item>
 

@@ -22,7 +22,7 @@
 					</div>
 					<div class="search-filter">
 						<n8n-input :placeholder="$locale.baseText('workflowOpen.searchWorkflows')" ref="inputFieldFilter" v-model="filterText">
-							<font-awesome-icon slot="prefix" icon="search"></font-awesome-icon>
+							<font-awesome-icon slot="prefix" icon="magnifying-glass"></font-awesome-icon>
 						</n8n-input>
 					</div>
 				</div>

@@ -52,7 +52,7 @@ export class Compression implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Compression',
 		name: 'compression',
-		icon: 'fa:file-archive',
+		icon: 'fa:file-zipper',
 		group: ['transform'],
 		subtitle: '={{$parameter["operation"]}}',
 		version: 1,
