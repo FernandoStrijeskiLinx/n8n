@@ -5,7 +5,7 @@ import {
 
 export class HumanusApi implements ICredentialType {
 	name = 'humanusApi';
-	displayName = 'Humamuns API';
+	displayName = 'Humanus API';
 	documentationUrl = 'humanus';
 	properties = [
 			{
