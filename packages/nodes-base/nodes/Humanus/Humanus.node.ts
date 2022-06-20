@@ -1,3 +1,4 @@
+import { json } from 'express';
 import {
 	IExecuteFunctions,
 } from 'n8n-core';
@@ -12,6 +13,7 @@ import {
 import {
 	OptionsWithUri,
 } from 'request';
+import { IData } from './Interfaces';
 
 export class Humanus implements INodeType {
 	description: INodeTypeDescription = {
@@ -42,19 +44,19 @@ export class Humanus implements INodeType {
 						type: 'options',
 						options: [
 								{
-										name: 'Exportação de colaboradores',
-										value: 'expColabs',
+										name: 'Employees',
+										value: 'employees',
 								},
 								{
-									name: 'Exportação contábil',
-									value: 'expContabil',
+									name: 'Accounting',
+									value: 'accounting',
 							  },
 								{
-									name: 'Exportação financeira',
-									value: 'expFinanceira',
+									name: 'Financial',
+									value: 'financial',
 							  },
 						],
-						default: 'expColabs',
+						default: 'employees',
 						required: true,
 						description: 'Resource to consume',
 				},
@@ -65,9 +67,9 @@ export class Humanus implements INodeType {
 						displayOptions: {
 								show: {
 										resource: [
-												'expColabs',
-												'expContabil',
-												'expFinanceira',
+												'employees',
+												'accounting',
+												'financial',
 										],
 								},
 						},
@@ -75,7 +77,7 @@ export class Humanus implements INodeType {
 								{
 										name: 'Export',
 										value: 'export',
-										description: 'Exporta as informações',
+										description: 'Export all datas',
 								},
 						],
 						default: 'export',
@@ -92,17 +94,17 @@ export class Humanus implements INodeType {
 												'export',
 										],
 										resource: [
-											'expColabs',
-											'expContabil',
-											'expFinanceira',
+											'employees',
+											'accounting',
+											'financial',
 										],
 								},
 						},
 						default:'',
-						description:'Apelido da base do cliente',
+						description:'Alias name of database.',
 				},
 				{
-					displayName: 'CPF',
+					displayName: 'Employee CPF',
 					name: 'cpf',
 					type: 'string',
 					required: true,
@@ -112,15 +114,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expColabs',
+										'employees',
 									],
 							},
 					},
 					default:'',
-					description:'CPF do colaborador a ser exportado.',
+					description:'Employee CPF to be exported.',
 				},
 				{
-					displayName: 'Codigo Empresa',
+					displayName: 'Company Code',
 					name: 'codEmpresa',
 					type: 'string',
 					required: true,
@@ -130,13 +132,13 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expContabil',
-										'expFinanceira',
+										'accounting',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Código da empresa a ser exportada.',
+					description:'Company code to be exported.',
 				},
 				{
 					displayName: 'Competência Geração',
@@ -149,15 +151,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expFinanceira',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Competência para realizar a geração financeira.',
+					description:'Year and Month of Financial Generation.',
 				},
 				{
-					displayName: 'Data Geração',
+					displayName: 'Date Generation',
 					name: 'dataGeracao',
 					type: 'string',
 					required: true,
@@ -167,15 +169,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expFinanceira',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Data da geração da integrção financeira.',
+					description:'Financial integration generation date.',
 				},
 				{
-					displayName: 'Número Filial',
+					displayName: 'Branch Number',
 					name: 'nroFilial',
 					type: 'number',
 					required: true,
@@ -185,16 +187,16 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expContabil',
-										'expFinanceira',
+										'accounting',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Número da Filial a ser exportada.',
+					description:'Branch number to be exported.',
 				},
 				{
-					displayName: 'Hora da geração',
+					displayName: 'Generation Time',
 					name: 'horaGeracao',
 					type: 'string',
 					required: true,
@@ -204,15 +206,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expFinanceira',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Hora da geração da integrção financeira.',
+					description:'Financial integration generation time.',
 				},
 				{
-					displayName: 'Lista dos títulos',
+					displayName: 'List of financial securities',
 					name: 'listatitulos',
 					type: 'string',
 					required: true,
@@ -222,15 +224,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expFinanceira',
+										'financial',
 									],
 							},
 					},
 					default:'',
-					description:'Lista dos títulos a exportar da integração financeira.',
+					description:'List of financial securities.',
 				},
 				{
-					displayName: 'Plano de Contas',
+					displayName: 'Chart of Accounts',
 					name: 'planoContas',
 					type: 'string',
 					required: true,
@@ -240,15 +242,15 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expContabil',
+										'accounting',
 									],
 							},
 					},
 					default:'',
-					description:'Plano de Contas utilizado pela contabilização.',
+					description:'Chart of Accounts used by accounting export.',
 				},
 				{
-					displayName: 'Competência Lote',
+					displayName: 'Year and Month Accounting Lot',
 					name: 'competenciaLote',
 					type: 'number',
 					required: true,
@@ -258,17 +260,86 @@ export class Humanus implements INodeType {
 											'export',
 									],
 									resource: [
-										'expContabil',
+										'accounting',
 									],
 							},
 					},
 					default:'',
-					description:'Competência utilizada para geração do lote contábil.',
+					description:'Year and Month Accounting Lot.',
 				},
 			],
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-			return [[]];
+		var body: IDataObject = {};
+
+		// const options: OptionsWithUri = {
+		// 	headers: {
+		// 		Accept: 'application/json',
+		// 		'Content-Type': 'application/json',
+		// 	},
+		// 	method,
+		// 	body,
+		// 	uri: `https://commentanalyzer.googleapis.com${endpoint}`,
+		// 	json: true,
+		// };
+
+		if (!body.length) {
+			//nao usa body se estiver vazio
+		}
+
+		// try {
+		// 	return await this.helpers.requestOAuth2.call(this, 'googlePerspectiveOAuth2Api', options);
+		// } catch (error) {
+		// 	throw new NodeApiError(this.getNode(), error);
+		// }
+
+
+
+
+		let responseData;
+    const resource = this.getNodeParameter('resource', 0) as string;
+    const operation = this.getNodeParameter('operation', 0) as string;
+    //Get credentials the user provided for this node
+    const credentials = await this.getCredentials('humanusApi') as IDataObject;
+
+    if (resource === 'employees') {
+        if (operation === 'export') {
+            // get email input
+            //const email = this.getNodeParameter('aliasName', 0) as string; //nao utilizado
+						const aliasName = this.getNodeParameter('aliasName', 0) as string;
+						const cpf = this.getNodeParameter('cpf', 1) as string;
+
+            // get additional fields input
+            // const additionalFields = this.getNodeParameter('additionalFields', 0) as IDataObject;
+
+						const body: IData = {
+							aliasName: aliasName,
+							cpf: cpf,
+						};
+
+            Object.assign(body);
+						//return [this.helpers.returnJsonArray(body)]; // precisa ser IDataObject
+
+            //Make http request according to <https://crsistemas.net.br/humanus/humanus/integracao/api/swagger/index.html>
+						//https://crsistemas.net.br/humanus/humanus/integracao/api/planx/integracaoColaborador/cadastro
+
+            const options: OptionsWithUri = {
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': `Bearer ${credentials.apiKey}`,
+                },
+                method: 'POST',
+                body: body,
+                uri: `https://crsistemas.net.br/humanus/humanus/integracao/api/planx/integracaoColaborador/cadastro`,
+                json: true,
+            };
+
+            responseData = await this.helpers.request(options);
+        }
+    }
+
+    // Map data to n8n data
+    return [this.helpers.returnJsonArray(responseData)];
 	}
 }
